@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ali express" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.14. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">campaign.aliexpress.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">acs.aliexpress.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">www.aliexpress.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_4" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_4</stringProp>
+            <stringProp name="Argument.value">cdp.aliexpress.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Ali express" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="wh_weex" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">wh_weex</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="preDownLoad" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preDownLoad</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="wx_navbar_transparent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">wx_navbar_transparent</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="wh_pid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">wh_pid</stringProp>
+                  <stringProp name="Argument.value">2020_March_Trendy_Women_Clothing</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="scm-url" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">scm-url</stringProp>
+                  <stringProp name="Argument.value">1007.19879.116754.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="wx_statusbar_hidden" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">wx_statusbar_hidden</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="spm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">spm</stringProp>
+                  <stringProp name="Argument.value">a2g0o.home.15027.1.650c2c25YVvuaV</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="pvid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">pvid</stringProp>
+                  <stringProp name="Argument.value">577b5a54-00b9-410a-a08d-5be797d1087c</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="productIds" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">productIds</stringProp>
+                  <stringProp name="Argument.value">4000394397194</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="wx_navbar_hidden" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">wx_navbar_hidden</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="_immersiveMode" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">_immersiveMode</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ignoreNavigationBar" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ignoreNavigationBar</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="preInitInstance" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preInitInstance</stringProp>
+                  <stringProp name="Argument.value">rax</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gps-id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gps-id</stringProp>
+                  <stringProp name="Argument.value">8052475</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="scm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">scm</stringProp>
+                  <stringProp name="Argument.value">1007.19879.116754.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="scm_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">scm_id</stringProp>
+                  <stringProp name="Argument.value">1007.19879.116754.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">wow/gf/upr-bypass</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143728469&amp;sign=2c3a7711f40fb3c0d26caac319ec221c&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143728469</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">2c3a7711f40fb3c0d26caac319ec221c</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143731958&amp;sign=d48f1ac58b905a58f397a76e07d78d0c&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143731958</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">d48f1ac58b905a58f397a76e07d78d0c</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;pvuuid&quot;:&quot;v1-9b07d63e-c944-4969-85f8-6e0267453b49-1583143729479&quot;,&quot;fri&quot;:&quot;{\&quot;dtcUrl\&quot;:\&quot;https://DO_NOT_CHANGE\&quot;,\&quot;moduleIdList\&quot;:[\&quot;9991895140\&quot;,\&quot;7711585010\&quot;,\&quot;4564849260\&quot;,\&quot;7188980020\&quot;,\&quot;2788001810\&quot;,\&quot;8201509390\&quot;,\&quot;6115251250\&quot;,\&quot;3547244760\&quot;,\&quot;9207743190\&quot;,\&quot;3168690400\&quot;,\&quot;6796327910\&quot;,\&quot;3841719260\&quot;,\&quot;7163173510\&quot;,\&quot;1323565000\&quot;,\&quot;4286621170\&quot;,\&quot;6611302940\&quot;,\&quot;3286418780\&quot;,\&quot;5587522570\&quot;,\&quot;2669991760\&quot;,\&quot;4397917970\&quot;,\&quot;4276957600\&quot;,\&quot;4180513060\&quot;,\&quot;5148310170\&quot;,\&quot;8383687210\&quot;,\&quot;9445803990\&quot;,\&quot;8404453540\&quot;,\&quot;3366817310\&quot;,\&quot;2142651670\&quot;,\&quot;7990844810\&quot;,\&quot;6131349250\&quot;,\&quot;1587273280\&quot;,\&quot;9646000180\&quot;,\&quot;5912643090\&quot;,\&quot;7152459620\&quot;,\&quot;8462206560\&quot;,\&quot;7899664160\&quot;,\&quot;4847183260\&quot;]}&quot;,&quot;schemaVersion&quot;:&quot;71f39940-42e4-4a5f-8c3f-8316f088d932&quot;,&quot;sequence&quot;:2,&quot;excludes&quot;:&quot;2788001810;4564849260;6115251250;7188980020;7711585010;8201509390;9991895140&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice,excludes&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143734144&amp;sign=7c600d01611cdd69c3aee2ce2c634e7a&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143734144</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">7c600d01611cdd69c3aee2ce2c634e7a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;pvuuid&quot;:&quot;v1-9b07d63e-c944-4969-85f8-6e0267453b49-1583143729479&quot;,&quot;fri&quot;:&quot;{\&quot;dtcUrl\&quot;:\&quot;https://DO_NOT_CHANGE\&quot;,\&quot;moduleIdList\&quot;:[\&quot;9991895140\&quot;,\&quot;7711585010\&quot;,\&quot;4564849260\&quot;,\&quot;7188980020\&quot;,\&quot;2788001810\&quot;,\&quot;8201509390\&quot;,\&quot;6115251250\&quot;,\&quot;3547244760\&quot;,\&quot;9207743190\&quot;,\&quot;3168690400\&quot;,\&quot;6796327910\&quot;,\&quot;3841719260\&quot;,\&quot;7163173510\&quot;,\&quot;1323565000\&quot;,\&quot;4286621170\&quot;,\&quot;6611302940\&quot;,\&quot;3286418780\&quot;,\&quot;5587522570\&quot;,\&quot;2669991760\&quot;,\&quot;4397917970\&quot;,\&quot;4276957600\&quot;,\&quot;4180513060\&quot;,\&quot;5148310170\&quot;,\&quot;8383687210\&quot;,\&quot;9445803990\&quot;,\&quot;8404453540\&quot;,\&quot;3366817310\&quot;,\&quot;2142651670\&quot;,\&quot;7990844810\&quot;,\&quot;6131349250\&quot;,\&quot;1587273280\&quot;,\&quot;9646000180\&quot;,\&quot;5912643090\&quot;,\&quot;7152459620\&quot;,\&quot;8462206560\&quot;,\&quot;7899664160\&quot;,\&quot;4847183260\&quot;]}&quot;,&quot;schemaVersion&quot;:&quot;71f39940-42e4-4a5f-8c3f-8316f088d932&quot;,&quot;sequence&quot;:3,&quot;excludes&quot;:&quot;2788001810;3168690400;3547244760;4564849260;6115251250;7188980020;7711585010;8201509390;9207743190;9991895140&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice,excludes&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143735093&amp;sign=a6d554a99d9cb86911c3376256985193&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143735093</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">a6d554a99d9cb86911c3376256985193</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;pvuuid&quot;:&quot;v1-9b07d63e-c944-4969-85f8-6e0267453b49-1583143729479&quot;,&quot;fri&quot;:&quot;{\&quot;dtcUrl\&quot;:\&quot;https://DO_NOT_CHANGE\&quot;,\&quot;moduleIdList\&quot;:[\&quot;9991895140\&quot;,\&quot;7711585010\&quot;,\&quot;4564849260\&quot;,\&quot;7188980020\&quot;,\&quot;2788001810\&quot;,\&quot;8201509390\&quot;,\&quot;6115251250\&quot;,\&quot;3547244760\&quot;,\&quot;9207743190\&quot;,\&quot;3168690400\&quot;,\&quot;6796327910\&quot;,\&quot;3841719260\&quot;,\&quot;7163173510\&quot;,\&quot;1323565000\&quot;,\&quot;4286621170\&quot;,\&quot;6611302940\&quot;,\&quot;3286418780\&quot;,\&quot;5587522570\&quot;,\&quot;2669991760\&quot;,\&quot;4397917970\&quot;,\&quot;4276957600\&quot;,\&quot;4180513060\&quot;,\&quot;5148310170\&quot;,\&quot;8383687210\&quot;,\&quot;9445803990\&quot;,\&quot;8404453540\&quot;,\&quot;3366817310\&quot;,\&quot;2142651670\&quot;,\&quot;7990844810\&quot;,\&quot;6131349250\&quot;,\&quot;1587273280\&quot;,\&quot;9646000180\&quot;,\&quot;5912643090\&quot;,\&quot;7152459620\&quot;,\&quot;8462206560\&quot;,\&quot;7899664160\&quot;,\&quot;4847183260\&quot;]}&quot;,&quot;schemaVersion&quot;:&quot;71f39940-42e4-4a5f-8c3f-8316f088d932&quot;,&quot;sequence&quot;:4,&quot;excludes&quot;:&quot;2788001810;3168690400;3547244760;3841719260;4564849260;6115251250;6796327910;7163173510;7188980020;7711585010;8201509390;9207743190;9991895140&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice,excludes&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143736967&amp;sign=02bde477f18b5310f414eea7abc06f29&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143736967</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">02bde477f18b5310f414eea7abc06f29</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;pvuuid&quot;:&quot;v1-9b07d63e-c944-4969-85f8-6e0267453b49-1583143729479&quot;,&quot;fri&quot;:&quot;{\&quot;dtcUrl\&quot;:\&quot;https://DO_NOT_CHANGE\&quot;,\&quot;moduleIdList\&quot;:[\&quot;9991895140\&quot;,\&quot;7711585010\&quot;,\&quot;4564849260\&quot;,\&quot;7188980020\&quot;,\&quot;2788001810\&quot;,\&quot;8201509390\&quot;,\&quot;6115251250\&quot;,\&quot;3547244760\&quot;,\&quot;9207743190\&quot;,\&quot;3168690400\&quot;,\&quot;6796327910\&quot;,\&quot;3841719260\&quot;,\&quot;7163173510\&quot;,\&quot;1323565000\&quot;,\&quot;4286621170\&quot;,\&quot;6611302940\&quot;,\&quot;3286418780\&quot;,\&quot;5587522570\&quot;,\&quot;2669991760\&quot;,\&quot;4397917970\&quot;,\&quot;4276957600\&quot;,\&quot;4180513060\&quot;,\&quot;5148310170\&quot;,\&quot;8383687210\&quot;,\&quot;9445803990\&quot;,\&quot;8404453540\&quot;,\&quot;3366817310\&quot;,\&quot;2142651670\&quot;,\&quot;7990844810\&quot;,\&quot;6131349250\&quot;,\&quot;1587273280\&quot;,\&quot;9646000180\&quot;,\&quot;5912643090\&quot;,\&quot;7152459620\&quot;,\&quot;8462206560\&quot;,\&quot;7899664160\&quot;,\&quot;4847183260\&quot;]}&quot;,&quot;schemaVersion&quot;:&quot;71f39940-42e4-4a5f-8c3f-8316f088d932&quot;,&quot;sequence&quot;:5,&quot;excludes&quot;:&quot;1323565000;2788001810;3168690400;3547244760;3841719260;4286621170;4564849260;6115251250;6611302940;6796327910;7163173510;7188980020;7711585010;8201509390;9207743190;9991895140&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice,excludes&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143738082&amp;sign=05e60a06e62fad528381ea1e67a5e1eb&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143738082</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">05e60a06e62fad528381ea1e67a5e1eb</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;pvuuid&quot;:&quot;v1-9b07d63e-c944-4969-85f8-6e0267453b49-1583143729479&quot;,&quot;fri&quot;:&quot;{\&quot;dtcUrl\&quot;:\&quot;https://DO_NOT_CHANGE\&quot;,\&quot;moduleIdList\&quot;:[\&quot;9991895140\&quot;,\&quot;7711585010\&quot;,\&quot;4564849260\&quot;,\&quot;7188980020\&quot;,\&quot;2788001810\&quot;,\&quot;8201509390\&quot;,\&quot;6115251250\&quot;,\&quot;3547244760\&quot;,\&quot;9207743190\&quot;,\&quot;3168690400\&quot;,\&quot;6796327910\&quot;,\&quot;3841719260\&quot;,\&quot;7163173510\&quot;,\&quot;1323565000\&quot;,\&quot;4286621170\&quot;,\&quot;6611302940\&quot;,\&quot;3286418780\&quot;,\&quot;5587522570\&quot;,\&quot;2669991760\&quot;,\&quot;4397917970\&quot;,\&quot;4276957600\&quot;,\&quot;4180513060\&quot;,\&quot;5148310170\&quot;,\&quot;8383687210\&quot;,\&quot;9445803990\&quot;,\&quot;8404453540\&quot;,\&quot;3366817310\&quot;,\&quot;2142651670\&quot;,\&quot;7990844810\&quot;,\&quot;6131349250\&quot;,\&quot;1587273280\&quot;,\&quot;9646000180\&quot;,\&quot;5912643090\&quot;,\&quot;7152459620\&quot;,\&quot;8462206560\&quot;,\&quot;7899664160\&quot;,\&quot;4847183260\&quot;]}&quot;,&quot;schemaVersion&quot;:&quot;71f39940-42e4-4a5f-8c3f-8316f088d932&quot;,&quot;sequence&quot;:6,&quot;excludes&quot;:&quot;1323565000;2669991760;2788001810;3168690400;3286418780;3547244760;3841719260;4286621170;4564849260;5587522570;6115251250;6611302940;6796327910;7163173510;7188980020;7711585010;8201509390;9207743190;9991895140&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice,excludes&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.aliexpress.com/item/Women-Streetwear-Pleated-Mom-Jeans-High-Waist-Loose-Slouchy-Jeans-Pockets-Fashion-Boyfriend-Pants-Casual-Ladies/4000395547719.html?spm=a2g0o.tm65908.6115251250.8.1ffc44b0z1mUzQ&amp;&amp;scm=1007.25281.150704.0&amp;scm_id=1007.25281.150704.0&amp;scm-url=1007.25281.150704.0&amp;pvid=ba1ad58d-7c26-4e0d-80dd-81b82b172db9" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="spm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">spm</stringProp>
+                  <stringProp name="Argument.value">a2g0o.tm65908.6115251250.8.1ffc44b0z1mUzQ</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="pvid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">pvid</stringProp>
+                  <stringProp name="Argument.value">ba1ad58d-7c26-4e0d-80dd-81b82b172db9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="scm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">scm</stringProp>
+                  <stringProp name="Argument.value">1007.25281.150704.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="scm-url" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">scm-url</stringProp>
+                  <stringProp name="Argument.value">1007.25281.150704.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="scm_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">scm_id</stringProp>
+                  <stringProp name="Argument.value">1007.25281.150704.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">item/Women-Streetwear-Pleated-Mom-Jeans-High-Waist-Loose-Slouchy-Jeans-Pockets-Fashion-Boyfriend-Pants-Casual-Ladies/4000395547719.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">12065.0</stringProp>
+              <stringProp name="ConstantTimer.delay">6032.5</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 12065 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.aliexpress.com/aeglodetailweb/api/store/header?itemId=4000395547719&amp;categoryId=200000361&amp;sellerAdminSeq=234730236&amp;storeNum=4517004&amp;minPrice=15.56&amp;maxPrice=16.38&amp;priceCurrency=USD" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="itemId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">itemId</stringProp>
+                  <stringProp name="Argument.value">4000395547719</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="priceCurrency" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">priceCurrency</stringProp>
+                  <stringProp name="Argument.value">USD</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sellerAdminSeq" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sellerAdminSeq</stringProp>
+                  <stringProp name="Argument.value">234730236</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="minPrice" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">minPrice</stringProp>
+                  <stringProp name="Argument.value">15.56</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="maxPrice" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">maxPrice</stringProp>
+                  <stringProp name="Argument.value">16.38</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="storeNum" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">storeNum</stringProp>
+                  <stringProp name="Argument.value">4517004</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="categoryId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">categoryId</stringProp>
+                  <stringProp name="Argument.value">200000361</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">aeglodetailweb/api/store/header</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://cdp.aliexpress.com/60.htm" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">60.htm</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://cdp.aliexpress.com/74.htm" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">74.htm</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://acs.aliexpress.com/h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/?jsv=2.5.1&amp;appKey=24815441&amp;t=1583143746637&amp;sign=222782b2937d3119655616788cc388cd&amp;api=mtop.tmall.kangaroo.core.service.route.AePageRecommendService&amp;v=1.0&amp;param=%5Bobject%20Object%5D&amp;timeout=10000&amp;jsonpIncPrefix=kangaroo&amp;dataType=jsonp&amp;type=originaljson&amp;preventFallback=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="preventFallback" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">preventFallback</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                  <stringProp name="Argument.value">1583143746637</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="param" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">param</stringProp>
+                  <stringProp name="Argument.value">[object Object]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dataType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dataType</stringProp>
+                  <stringProp name="Argument.value">jsonp</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sign" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sign</stringProp>
+                  <stringProp name="Argument.value">222782b2937d3119655616788cc388cd</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="appKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">appKey</stringProp>
+                  <stringProp name="Argument.value">24815441</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="api" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">api</stringProp>
+                  <stringProp name="Argument.value">mtop.tmall.kangaroo.core.service.route.AePageRecommendService</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsv</stringProp>
+                  <stringProp name="Argument.value">2.5.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">originaljson</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="jsonpIncPrefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">jsonpIncPrefix</stringProp>
+                  <stringProp name="Argument.value">kangaroo</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="timeout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">timeout</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="data" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">data</stringProp>
+                  <stringProp name="Argument.value">{&quot;url&quot;:&quot;https://campaign.aliexpress.com/wow/gf/upr-bypass?spm=a2g0o.home.15027.1.650c2c25YVvuaV&amp;wh_pid=2020_March_Trendy_Women_Clothing&amp;wh_weex=true&amp;preDownLoad=true&amp;preInitInstance=rax&amp;_immersiveMode=true&amp;wx_navbar_hidden=true&amp;wx_navbar_transparent=true&amp;wx_statusbar_hidden=true&amp;ignoreNavigationBar=true&amp;gps-id=8052475&amp;scm=1007.19879.116754.0&amp;scm_id=1007.19879.116754.0&amp;scm-url=1007.19879.116754.0&amp;pvid=577b5a54-00b9-410a-a08d-5be797d1087c&amp;productIds=4000394397194&quot;,&quot;cookie&quot;:&quot;&quot;,&quot;pvuuid&quot;:&quot;v1-9b07d63e-c944-4969-85f8-6e0267453b49-1583143729479&quot;,&quot;fri&quot;:&quot;{\&quot;dtcUrl\&quot;:\&quot;https://DO_NOT_CHANGE\&quot;,\&quot;moduleIdList\&quot;:[\&quot;9991895140\&quot;,\&quot;7711585010\&quot;,\&quot;4564849260\&quot;,\&quot;7188980020\&quot;,\&quot;2788001810\&quot;,\&quot;8201509390\&quot;,\&quot;6115251250\&quot;,\&quot;3547244760\&quot;,\&quot;9207743190\&quot;,\&quot;3168690400\&quot;,\&quot;6796327910\&quot;,\&quot;3841719260\&quot;,\&quot;7163173510\&quot;,\&quot;1323565000\&quot;,\&quot;4286621170\&quot;,\&quot;6611302940\&quot;,\&quot;3286418780\&quot;,\&quot;5587522570\&quot;,\&quot;2669991760\&quot;,\&quot;4397917970\&quot;,\&quot;4276957600\&quot;,\&quot;4180513060\&quot;,\&quot;5148310170\&quot;,\&quot;8383687210\&quot;,\&quot;9445803990\&quot;,\&quot;8404453540\&quot;,\&quot;3366817310\&quot;,\&quot;2142651670\&quot;,\&quot;7990844810\&quot;,\&quot;6131349250\&quot;,\&quot;1587273280\&quot;,\&quot;9646000180\&quot;,\&quot;5912643090\&quot;,\&quot;7152459620\&quot;,\&quot;8462206560\&quot;,\&quot;7899664160\&quot;,\&quot;4847183260\&quot;]}&quot;,&quot;schemaVersion&quot;:&quot;71f39940-42e4-4a5f-8c3f-8316f088d932&quot;,&quot;sequence&quot;:10,&quot;excludes&quot;:&quot;1323565000;1587273280;2142651670;2669991760;2788001810;3168690400;3286418780;3366817310;3547244760;3841719260;4180513060;4276957600;4286621170;4397917970;4564849260;5148310170;5587522570;6115251250;6131349250;6611302940;6796327910;7163173510;7188980020;7711585010;7990844810;8201509390;8383687210;8404453540;9207743190;9445803990;9991895140&quot;,&quot;device&quot;:&quot;pc&quot;,&quot;backupParams&quot;:&quot;aeCurrency,aeRegion,aeLocale,device,aeDevice,excludes&quot;,&quot;aeCurrency&quot;:&quot;USD&quot;,&quot;aeRegion&quot;:&quot;BD&quot;,&quot;aeLocale&quot;:&quot;en_US&quot;,&quot;cna&quot;:&quot;usfjFs1mOVMCAWdskIwZW/xf&quot;,&quot;buyerAliId&quot;:&quot;&quot;,&quot;acs_rt&quot;:&quot;&quot;,&quot;gdpr&quot;:&quot;null&quot;,&quot;channel&quot;:&quot;PREMINUM&quot;,&quot;aeDevice&quot;:&quot;pc&quot;,&quot;extParam&quot;:&quot;{\&quot;platform\&quot;:\&quot;pc\&quot;,\&quot;aeCurrency\&quot;:\&quot;USD\&quot;,\&quot;aeRegion\&quot;:\&quot;BD\&quot;,\&quot;aeLocale\&quot;:\&quot;en_US\&quot;}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">h5/mtop.tmall.kangaroo.core.service.route.aepagerecommendservice/1.0/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="login" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.14. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">api-private.atlassian.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">id.atlassian.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">auth.atlassian.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_4" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_4</stringProp>
+            <stringProp name="Argument.value">bitbucket.org</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_5" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_5</stringProp>
+            <stringProp name="Argument.value">sentry.io</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_6" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_6</stringProp>
+            <stringProp name="Argument.value">api.bitbucket.org</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_7" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_7</stringProp>
+            <stringProp name="Argument.value">bam.nr-data.net</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">20</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en-US&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.6.5&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;,&quot;campaign&quot;:{}},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;identity&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;source&quot;:&quot;loginScreen&quot;,&quot;actionSubject&quot;:&quot;button&quot;,&quot;action&quot;:&quot;clicked&quot;,&quot;actionSubjectId&quot;:&quot;continueToLogin&quot;,&quot;attributes&quot;:{&quot;firstProductAccessed&quot;:&quot;bitbucket&quot;,&quot;isMobileApp&quot;:false},&quot;tags&quot;:[&quot;identity&quot;],&quot;eventType&quot;:&quot;ui&quot;,&quot;tabId&quot;:&quot;cbf1e826-9e71-4a2d-adb7-1d2cc8940027&quot;,&quot;sessionId&quot;:&quot;1583317896345&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;button clicked&quot;,&quot;messageId&quot;:&quot;ajs-dc9e81acecc4178ac884814670bf625e&quot;,&quot;anonymousId&quot;:&quot;85f9ae84-2630-47bb-8a26-224b429de34e&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:18.806Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:null,&quot;sentAt&quot;:&quot;2020-03-04T10:33:18.813Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en-US&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.6.5&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;,&quot;campaign&quot;:{}},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;identity&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;source&quot;:&quot;loginScreen&quot;,&quot;actionSubject&quot;:&quot;sli&quot;,&quot;action&quot;:&quot;checkUsernameStart&quot;,&quot;attributes&quot;:{&quot;firstProductAccessed&quot;:&quot;bitbucket&quot;,&quot;isMobileApp&quot;:false},&quot;tags&quot;:[&quot;identity&quot;],&quot;eventType&quot;:&quot;operational&quot;,&quot;tabId&quot;:&quot;cbf1e826-9e71-4a2d-adb7-1d2cc8940027&quot;,&quot;sessionId&quot;:&quot;1583317896345&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;sli checkUsernameStart&quot;,&quot;messageId&quot;:&quot;ajs-fbc31afe84fceb918569e5ba38987ab0&quot;,&quot;anonymousId&quot;:&quot;85f9ae84-2630-47bb-8a26-224b429de34e&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:18.828Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:null,&quot;sentAt&quot;:&quot;2020-03-04T10:33:18.832Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://id.atlassian.com/rest/check-username?continue=https%3A%2F%2Fid.atlassian.com%2Fopenid%2Fv2%2Fop%3Fopenid.sreg.optional%3Dfullname%2Cnickname%2Cemail%26openid.return_to%3Dhttps%3A%2F%2Fbitbucket.org%2Fsocialauth%2Fcomplete%2Fatlassianid%2F%3Fjanrain_nonce%253D2020-03-04T10%25253A31%25253A35ZXk4Otg%26openid.realm%3Dhttps%3A%2F%2Fbitbucket.org%26openid.ns.sreg%3Dhttp%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1%26openid.ns.crowdid%3Dhttps%3A%2F%2Fdeveloper.atlassian.com%2Fdisplay%2FCROWDDEV%2FCrowdID%252BOpenID%252Bextensions%2523CrowdIDOpenIDextensions-login-page-parameters%26openid.ns%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%26openid.mode%3Dcheckid_setup%26openid.identity%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.crowdid.application%3Dbitbucket%26openid.claimed_id%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.assoc_handle%3D25614830&amp;prompt=&amp;application=bitbucket&amp;tenant=&amp;email=&amp;errorCode=" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="application" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">application</stringProp>
+                  <stringProp name="Argument.value">bitbucket</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="continue" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">continue</stringProp>
+                  <stringProp name="Argument.value">https://id.atlassian.com/openid/v2/op?openid.sreg.optional=fullname,nickname,email&amp;openid.return_to=https://bitbucket.org/socialauth/complete/atlassianid/?janrain_nonce%3D2020-03-04T10%253A31%253A35ZXk4Otg&amp;openid.realm=https://bitbucket.org&amp;openid.ns.sreg=http://openid.net/extensions/sreg/1.1&amp;openid.ns.crowdid=https://developer.atlassian.com/display/CROWDDEV/CrowdID%2BOpenID%2Bextensions%23CrowdIDOpenIDextensions-login-page-parameters&amp;openid.ns=http://specs.openid.net/auth/2.0&amp;openid.mode=checkid_setup&amp;openid.identity=http://specs.openid.net/auth/2.0/identifier_select&amp;openid.crowdid.application=bitbucket&amp;openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&amp;openid.assoc_handle=25614830</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="errorCode" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">errorCode</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="prompt" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">prompt</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="tenant" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">tenant</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">email</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="csrfToken" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">csrfToken</stringProp>
+                  <stringProp name="Argument.value">1d585c3cf25a448d75eeaaf319499ce74bd69928</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">test01.inventiveapps@gmail.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/check-username</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://id.atlassian.com/rest/marketing-consent/status" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;email&quot;:&quot;test01.inventiveapps@gmail.com&quot;,&quot;locale&quot;:&quot;BD&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rest/marketing-consent/status</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en-US&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.6.5&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;,&quot;campaign&quot;:{}},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;identity&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;source&quot;:&quot;loginScreen&quot;,&quot;actionSubject&quot;:&quot;sli&quot;,&quot;action&quot;:&quot;checkUsernameSuccessful&quot;,&quot;attributes&quot;:{&quot;firstProductAccessed&quot;:&quot;bitbucket&quot;,&quot;isMobileApp&quot;:false},&quot;tags&quot;:[&quot;identity&quot;],&quot;eventType&quot;:&quot;operational&quot;,&quot;tabId&quot;:&quot;cbf1e826-9e71-4a2d-adb7-1d2cc8940027&quot;,&quot;sessionId&quot;:&quot;1583317896345&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;sli checkUsernameSuccessful&quot;,&quot;messageId&quot;:&quot;ajs-a823c333495fe37da757dbb75b5aafd0&quot;,&quot;anonymousId&quot;:&quot;85f9ae84-2630-47bb-8a26-224b429de34e&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:19.497Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:null,&quot;sentAt&quot;:&quot;2020-03-04T10:33:19.502Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en-US&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.6.5&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;,&quot;campaign&quot;:{}},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;identity&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;source&quot;:&quot;loginScreen&quot;,&quot;actionSubject&quot;:&quot;button&quot;,&quot;action&quot;:&quot;clicked&quot;,&quot;actionSubjectId&quot;:&quot;login&quot;,&quot;attributes&quot;:{&quot;firstProductAccessed&quot;:&quot;bitbucket&quot;,&quot;isMobileApp&quot;:false},&quot;tags&quot;:[&quot;identity&quot;],&quot;eventType&quot;:&quot;ui&quot;,&quot;tabId&quot;:&quot;cbf1e826-9e71-4a2d-adb7-1d2cc8940027&quot;,&quot;sessionId&quot;:&quot;1583317896345&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;button clicked&quot;,&quot;messageId&quot;:&quot;ajs-e8cff5d7ed7ba0feeb770237aecbb8eb&quot;,&quot;anonymousId&quot;:&quot;85f9ae84-2630-47bb-8a26-224b429de34e&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:28.042Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:null,&quot;sentAt&quot;:&quot;2020-03-04T10:33:28.048Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en-US&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.6.5&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;,&quot;campaign&quot;:{}},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;identity&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;source&quot;:&quot;loginScreen&quot;,&quot;actionSubject&quot;:&quot;form&quot;,&quot;action&quot;:&quot;submitted&quot;,&quot;actionSubjectId&quot;:&quot;loginForm&quot;,&quot;attributes&quot;:{&quot;firstProductAccessed&quot;:&quot;bitbucket&quot;,&quot;isMobileApp&quot;:false,&quot;marketingConsent&quot;:&quot;not_shown&quot;},&quot;tags&quot;:[&quot;identity&quot;],&quot;eventType&quot;:&quot;ui&quot;,&quot;tabId&quot;:&quot;cbf1e826-9e71-4a2d-adb7-1d2cc8940027&quot;,&quot;sessionId&quot;:&quot;1583317896345&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;form submitted&quot;,&quot;messageId&quot;:&quot;ajs-28f1ed6095a84d88420f1bd24e7f6aea&quot;,&quot;anonymousId&quot;:&quot;85f9ae84-2630-47bb-8a26-224b429de34e&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:28.066Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:null,&quot;sentAt&quot;:&quot;2020-03-04T10:33:28.072Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://auth.atlassian.com/co/authenticate" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;client_id&quot;:&quot;tDP5by46cc3gEck7d2vbHZsqsfrDK6t9&quot;,&quot;username&quot;:&quot;test01.inventiveapps@gmail.com&quot;,&quot;password&quot;:&quot;Test01apps&quot;,&quot;realm&quot;:&quot;eyJhcHBsaWNhdGlvbktleSI6ImJpdGJ1Y2tldCIsInRlbmFudCI6IiJ9&quot;,&quot;credential_type&quot;:&quot;http://auth0.com/oauth/grant-type/password-realm&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">co/authenticate</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Auth0-Client" elementType="Header">
+                  <stringProp name="Header.name">Auth0-Client</stringProp>
+                  <stringProp name="Header.value">eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS43LjIifQ==</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://auth.atlassian.com/authorize?client_id=tDP5by46cc3gEck7d2vbHZsqsfrDK6t9&amp;redirect_uri=https%3A%2F%2Fid.atlassian.com%2Flogin%2Fcallback%3Fapplication%3Dbitbucket%26continue%3Dhttps%253A%252F%252Fid.atlassian.com%252Fopenid%252Fv2%252Fop%253Fopenid.sreg.optional%253Dfullname%252Cnickname%252Cemail%2526openid.return_to%253Dhttps%253A%252F%252Fbitbucket.org%252Fsocialauth%252Fcomplete%252Fatlassianid%252F%253Fjanrain_nonce%25253D2020-03-04T10%2525253A31%2525253A35ZXk4Otg%2526openid.realm%253Dhttps%253A%252F%252Fbitbucket.org%2526openid.ns.sreg%253Dhttp%253A%252F%252Fopenid.net%252Fextensions%252Fsreg%252F1.1%2526openid.ns.crowdid%253Dhttps%253A%252F%252Fdeveloper.atlassian.com%252Fdisplay%252FCROWDDEV%252FCrowdID%25252BOpenID%25252Bextensions%252523CrowdIDOpenIDextensions-login-page-parameters%2526openid.ns%253Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%2526openid.mode%253Dcheckid_setup%2526openid.identity%253Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%252Fidentifier_select%2526openid.crowdid.application%253Dbitbucket%2526openid.claimed_id%253Dhttp%253A%252F%252Fspecs.openid.net%252Fauth%252F2.0%252Fidentifier_select%2526openid.assoc_handle%253D25614830%26email%3Dtest01.inventiveapps%2540gmail.com%26errorCode%26prompt%3D%26tenant%3D&amp;response_type=code&amp;state=eyJjc3JmVG9rZW4iOiIxZDU4NWMzY2YyNWE0NDhkNzVlZWFhZjMxOTQ5OWNlNzRiZDY5OTI4IiwiYW5vbnltb3VzSWQiOiJcIjg1ZjlhZTg0LTI2MzAtNDdiYi04YTI2LTIyNGI0MjlkZTM0ZVwiIn0%3D&amp;realm=eyJhcHBsaWNhdGlvbktleSI6ImJpdGJ1Y2tldCIsInRlbmFudCI6IiJ9&amp;scope=openid%20profile&amp;login_ticket=Je_yWOBb-FmlJF5oO-nSYiiHP3qV0jV0&amp;auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS43LjIifQ%3D%3D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="login_ticket" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">login_ticket</stringProp>
+                  <stringProp name="Argument.value">Je_yWOBb-FmlJF5oO-nSYiiHP3qV0jV0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="auth0Client" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">auth0Client</stringProp>
+                  <stringProp name="Argument.value">eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS43LjIifQ==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="scope" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">scope</stringProp>
+                  <stringProp name="Argument.value">openid profile</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="response_type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">response_type</stringProp>
+                  <stringProp name="Argument.value">code</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="realm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">realm</stringProp>
+                  <stringProp name="Argument.value">eyJhcHBsaWNhdGlvbktleSI6ImJpdGJ1Y2tldCIsInRlbmFudCI6IiJ9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="redirect_uri" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">redirect_uri</stringProp>
+                  <stringProp name="Argument.value">https://id.atlassian.com/login/callback?application=bitbucket&amp;continue=https%3A%2F%2Fid.atlassian.com%2Fopenid%2Fv2%2Fop%3Fopenid.sreg.optional%3Dfullname%2Cnickname%2Cemail%26openid.return_to%3Dhttps%3A%2F%2Fbitbucket.org%2Fsocialauth%2Fcomplete%2Fatlassianid%2F%3Fjanrain_nonce%253D2020-03-04T10%25253A31%25253A35ZXk4Otg%26openid.realm%3Dhttps%3A%2F%2Fbitbucket.org%26openid.ns.sreg%3Dhttp%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1%26openid.ns.crowdid%3Dhttps%3A%2F%2Fdeveloper.atlassian.com%2Fdisplay%2FCROWDDEV%2FCrowdID%252BOpenID%252Bextensions%2523CrowdIDOpenIDextensions-login-page-parameters%26openid.ns%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%26openid.mode%3Dcheckid_setup%26openid.identity%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.crowdid.application%3Dbitbucket%26openid.claimed_id%3Dhttp%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select%26openid.assoc_handle%3D25614830&amp;email=test01.inventiveapps%40gmail.com&amp;errorCode&amp;prompt=&amp;tenant=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">state</stringProp>
+                  <stringProp name="Argument.value">eyJjc3JmVG9rZW4iOiIxZDU4NWMzY2YyNWE0NDhkNzVlZWFhZjMxOTQ5OWNlNzRiZDY5OTI4IiwiYW5vbnltb3VzSWQiOiJcIjg1ZjlhZTg0LTI2MzAtNDdiYi04YTI2LTIyNGI0MjlkZTM0ZVwiIn0=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="client_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">client_id</stringProp>
+                  <stringProp name="Argument.value">tDP5by46cc3gEck7d2vbHZsqsfrDK6t9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">authorize</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://id.atlassian.com/openid/v2/op?openid.sreg.optional=fullname,nickname,email&amp;openid.return_to=https://bitbucket.org/socialauth/complete/atlassianid/?janrain_nonce%3D2020-03-04T10%253A31%253A35ZXk4Otg&amp;openid.realm=https://bitbucket.org&amp;openid.ns.sreg=http://openid.net/extensions/sreg/1.1&amp;openid.ns.crowdid=https://developer.atlassian.com/display/CROWDDEV/CrowdID%2BOpenID%2Bextensions%23CrowdIDOpenIDextensions-login-page-parameters&amp;openid.ns=http://specs.openid.net/auth/2.0&amp;openid.mode=checkid_setup&amp;openid.identity=http://specs.openid.net/auth/2.0/identifier_select&amp;openid.crowdid.application=bitbucket&amp;openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&amp;openid.assoc_handle=25614830" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="openid.return_to" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.return_to</stringProp>
+                  <stringProp name="Argument.value">https://bitbucket.org/socialauth/complete/atlassianid/?janrain_nonce=2020-03-04T10%3A31%3A35ZXk4Otg</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.crowdid.application" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">openid.crowdid.application</stringProp>
+                  <stringProp name="Argument.value">bitbucket</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.realm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.realm</stringProp>
+                  <stringProp name="Argument.value">https://bitbucket.org</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.ns.sreg" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.ns.sreg</stringProp>
+                  <stringProp name="Argument.value">http://openid.net/extensions/sreg/1.1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.identity" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.identity</stringProp>
+                  <stringProp name="Argument.value">http://specs.openid.net/auth/2.0/identifier_select</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.assoc_handle" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">openid.assoc_handle</stringProp>
+                  <stringProp name="Argument.value">25614830</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.mode" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">openid.mode</stringProp>
+                  <stringProp name="Argument.value">checkid_setup</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.claimed_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.claimed_id</stringProp>
+                  <stringProp name="Argument.value">http://specs.openid.net/auth/2.0/identifier_select</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="openid.sreg.optional" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.sreg.optional</stringProp>
+                  <stringProp name="Argument.value">fullname,nickname,email</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="openid.ns" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.ns</stringProp>
+                  <stringProp name="Argument.value">http://specs.openid.net/auth/2.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="openid.ns.crowdid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">openid.ns.crowdid</stringProp>
+                  <stringProp name="Argument.value">https://developer.atlassian.com/display/CROWDDEV/CrowdID+OpenID+extensions#CrowdIDOpenIDextensions-login-page-parameters</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">openid/v2/op</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">11724.0</stringProp>
+              <stringProp name="ConstantTimer.delay">5862</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 11724 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bitbucket.org/!api/2.0/repositories?q=uuid%20%3D%20%22%7B44451933-8013-4611-a69b-b118650dd9cb%7D%22%20OR%20uuid%20%3D%20%22%7B88ca448e-7207-4721-ba41-938e1d346cb9%7D%22&amp;role=member" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="q" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">q</stringProp>
+                  <stringProp name="Argument.value">uuid = &quot;{44451933-8013-4611-a69b-b118650dd9cb}&quot; OR uuid = &quot;{88ca448e-7207-4721-ba41-938e1d346cb9}&quot;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="role" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">role</stringProp>
+                  <stringProp name="Argument.value">member</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">!api/2.0/repositories</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Bitbucket-Frontend" elementType="Header">
+                  <stringProp name="Header.name">X-Bitbucket-Frontend</stringProp>
+                  <stringProp name="Header.value">frontbucket</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRFToken" elementType="Header">
+                  <stringProp name="Header.name">X-CSRFToken</stringProp>
+                  <stringProp name="Header.value">tOYrmB7C5m2fnO6PdcU6buKRea59WqcpIuvtRtOm7BLEUAAlHijMMdR97g055hfE</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/emoji/standard?altScale=XHDPI&amp;maxVersion=VERSION_9_0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="altScale" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">altScale</stringProp>
+                  <stringProp name="Argument.value">XHDPI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="maxVersion" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">maxVersion</stringProp>
+                  <stringProp name="Argument.value">VERSION_9_0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">emoji/standard</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.7.1&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;bitbucket&quot;,&quot;version&quot;:&quot;c821b6cf8ecf&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;userIdType&quot;:&quot;atlassianAccount&quot;,&quot;source&quot;:&quot;atlassianSwitcher&quot;,&quot;actionSubject&quot;:&quot;experiment&quot;,&quot;action&quot;:&quot;exposed&quot;,&quot;actionSubjectId&quot;:&quot;atlassianSwitcherWithDESJoinableSite&quot;,&quot;attributes&quot;:{&quot;key&quot;:&quot;growth-join-section-in-atlassian-switcher&quot;,&quot;initialEnrolled&quot;:true,&quot;enrolled&quot;:false,&quot;reasons&quot;:[&quot;JOINABLE_SITE_CALULATION_NOT_ENABLED&quot;],&quot;error&quot;:null},&quot;eventType&quot;:&quot;track&quot;,&quot;tabId&quot;:&quot;6d45dae5-7859-48c8-b402-68759dfa3873&quot;,&quot;sessionId&quot;:&quot;1583317882750&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;experiment exposed&quot;,&quot;messageId&quot;:&quot;ajs-d0ada560bd750018eb1ef8ab0cdda4f8&quot;,&quot;anonymousId&quot;:&quot;ce9be9eb-d5f8-40eb-8823-2eb8eab81337&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:46.221Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:&quot;5a5af89ee080056761b2033f&quot;,&quot;sentAt&quot;:&quot;2020-03-04T10:33:46.229Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/p" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.7.1&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;bitbucket&quot;,&quot;version&quot;:&quot;c821b6cf8ecf&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;userIdType&quot;:&quot;atlassianAccount&quot;,&quot;title&quot;:&quot;&quot;,&quot;path&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;&quot;,&quot;eventType&quot;:&quot;screen&quot;,&quot;attributes&quot;:{&quot;frontbucketView&quot;:true},&quot;tabId&quot;:&quot;6d45dae5-7859-48c8-b402-68759dfa3873&quot;,&quot;sessionId&quot;:&quot;1583317882750&quot;,&quot;taskSessions&quot;:{},&quot;name&quot;:&quot;dashboardScreen&quot;},&quot;category&quot;:null,&quot;name&quot;:&quot;dashboardScreen&quot;,&quot;messageId&quot;:&quot;ajs-a6c878eb81373b613f64c3cd873df03c&quot;,&quot;anonymousId&quot;:&quot;ce9be9eb-d5f8-40eb-8823-2eb8eab81337&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:46.398Z&quot;,&quot;type&quot;:&quot;page&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:&quot;5a5af89ee080056761b2033f&quot;,&quot;sentAt&quot;:&quot;2020-03-04T10:33:46.403Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/p</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bitbucket.org/!api/internal/repository-statuses" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="uuid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">uuid</stringProp>
+                  <stringProp name="Argument.value">{44451933-8013-4611-a69b-b118650dd9cb}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">!api/internal/repository-statuses</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Bitbucket-Frontend" elementType="Header">
+                  <stringProp name="Header.name">X-Bitbucket-Frontend</stringProp>
+                  <stringProp name="Header.value">frontbucket</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRFToken" elementType="Header">
+                  <stringProp name="Header.name">X-CSRFToken</stringProp>
+                  <stringProp name="Header.value">tOYrmB7C5m2fnO6PdcU6buKRea59WqcpIuvtRtOm7BLEUAAlHijMMdR97g055hfE</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bitbucket.org/!api/internal/my/available-products" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">!api/internal/my/available-products</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Bitbucket-Frontend" elementType="Header">
+                  <stringProp name="Header.name">X-Bitbucket-Frontend</stringProp>
+                  <stringProp name="Header.value">frontbucket</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRFToken" elementType="Header">
+                  <stringProp name="Header.name">X-CSRFToken</stringProp>
+                  <stringProp name="Header.value">tOYrmB7C5m2fnO6PdcU6buKRea59WqcpIuvtRtOm7BLEUAAlHijMMdR97g055hfE</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bitbucket.org/!api/internal/user/preferences/%7Bf26de55e-91d3-4e73-9929-9339365685cb%7D/dashboard%3Ajira-issues%3Asite/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">!api/internal/user/preferences/%7Bf26de55e-91d3-4e73-9929-9339365685cb%7D/dashboard%3Ajira-issues%3Asite/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Bitbucket-Frontend" elementType="Header">
+                  <stringProp name="Header.name">X-Bitbucket-Frontend</stringProp>
+                  <stringProp name="Header.value">frontbucket</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRFToken" elementType="Header">
+                  <stringProp name="Header.name">X-CSRFToken</stringProp>
+                  <stringProp name="Header.value">tOYrmB7C5m2fnO6PdcU6buKRea59WqcpIuvtRtOm7BLEUAAlHijMMdR97g055hfE</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api-private.atlassian.com/gasv3/api/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;context&quot;:{&quot;locale&quot;:&quot;en&quot;,&quot;screen&quot;:{&quot;width&quot;:1366,&quot;height&quot;:768,&quot;density&quot;:1},&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;1.7.1&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;env&quot;:&quot;prod&quot;,&quot;product&quot;:&quot;bitbucket&quot;,&quot;version&quot;:&quot;c821b6cf8ecf&quot;,&quot;origin&quot;:&quot;web&quot;,&quot;platform&quot;:&quot;web&quot;,&quot;tenantIdType&quot;:&quot;none&quot;,&quot;userIdType&quot;:&quot;atlassianAccount&quot;,&quot;source&quot;:&quot;ui&quot;,&quot;actionSubject&quot;:&quot;ui&quot;,&quot;action&quot;:&quot;readyForUser&quot;,&quot;attributes&quot;:{&quot;featureFlags&quot;:{&quot;isAtlaskitRouterEnabled&quot;:false,&quot;isParcelBundlesEnabled&quot;:false},&quot;stopTimePerformanceMarkEntryName&quot;:&quot;SSR_SPA_SSR_HTML&quot;,&quot;appName&quot;:&quot;frontbucket&quot;,&quot;identityPassthroughEnabled&quot;:true,&quot;isHorizontalNavEnabled&quot;:false,&quot;appWasServerSideRendered&quot;:false,&quot;task&quot;:&quot;bitbucket.apps.dashboard.views.DashboardOverviewView&quot;,&quot;type&quot;:&quot;initialLoad&quot;,&quot;threshold&quot;:1000,&quot;apdex&quot;:0,&quot;startTime&quot;:1583318021002.029,&quot;stopTime&quot;:1583318026624.509,&quot;duration&quot;:5622.47998046875,&quot;isActiveTab&quot;:true},&quot;eventType&quot;:&quot;operational&quot;,&quot;tabId&quot;:&quot;6d45dae5-7859-48c8-b402-68759dfa3873&quot;,&quot;sessionId&quot;:&quot;1583317882750&quot;,&quot;taskSessions&quot;:{}},&quot;event&quot;:&quot;ui readyForUser&quot;,&quot;messageId&quot;:&quot;ajs-38c6188bacfe28ee1940b4308c823ac5&quot;,&quot;anonymousId&quot;:&quot;ce9be9eb-d5f8-40eb-8823-2eb8eab81337&quot;,&quot;timestamp&quot;:&quot;2020-03-04T10:33:46.633Z&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;&quot;,&quot;userId&quot;:&quot;5a5af89ee080056761b2033f&quot;,&quot;sentAt&quot;:&quot;2020-03-04T10:33:46.640Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;BeforeSend&quot;,&quot;Segment.io&quot;],&quot;unbundled&quot;:[&quot;Amplitude&quot;]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">gasv3/api/v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bitbucket.org/!api/internal/user/preferences/%7Bf26de55e-91d3-4e73-9929-9339365685cb%7D/dashboard%3Ajira-issues%3Asite/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_4}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">!api/internal/user/preferences/%7Bf26de55e-91d3-4e73-9929-9339365685cb%7D/dashboard%3Ajira-issues%3Asite/</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Bitbucket-Frontend" elementType="Header">
+                  <stringProp name="Header.name">X-Bitbucket-Frontend</stringProp>
+                  <stringProp name="Header.value">frontbucket</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="X-CSRFToken" elementType="Header">
+                  <stringProp name="Header.name">X-CSRFToken</stringProp>
+                  <stringProp name="Header.value">tOYrmB7C5m2fnO6PdcU6buKRea59WqcpIuvtRtOm7BLEUAAlHijMMdR97g055hfE</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://sentry.io/api/1480772/store/?sentry_key=2dcda83904474d8c86928ebbfa1ab294&amp;sentry_version=7" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;exception&quot;:{&quot;values&quot;:[{&quot;type&quot;:&quot;SyntaxError&quot;,&quot;value&quot;:&quot;Unexpected end of JSON input&quot;,&quot;stacktrace&quot;:{&quot;frames&quot;:[{&quot;colno&quot;:0,&quot;filename&quot;:&quot;?&quot;,&quot;function&quot;:&quot;nrWrapper&quot;,&quot;in_app&quot;:false,&quot;lineno&quot;:0},{&quot;colno&quot;:115951,&quot;filename&quot;:&quot;https://d301sr5gafysq2.cloudfront.net/frontbucket/app.bb73b12d727b2e28e306.js&quot;,&quot;function&quot;:&quot;?&quot;,&quot;in_app&quot;:true,&quot;lineno&quot;:78},{&quot;colno&quot;:5488,&quot;filename&quot;:&quot;https://bitbucket.org/?detectloginloop&quot;,&quot;function&quot;:&quot;Response.t.&lt;computed&gt; [as json]&quot;,&quot;in_app&quot;:true,&quot;lineno&quot;:15}]},&quot;mechanism&quot;:{&quot;handled&quot;:true,&quot;type&quot;:&quot;generic&quot;}}]},&quot;level&quot;:&quot;error&quot;,&quot;event_id&quot;:&quot;aa17b5a61c2049d68728e97db127b504&quot;,&quot;platform&quot;:&quot;javascript&quot;,&quot;sdk&quot;:{&quot;name&quot;:&quot;sentry.javascript.browser&quot;,&quot;packages&quot;:[{&quot;name&quot;:&quot;npm:@sentry/browser&quot;,&quot;version&quot;:&quot;5.11.1&quot;}],&quot;version&quot;:&quot;5.11.1&quot;,&quot;integrations&quot;:[&quot;InboundFilters&quot;,&quot;FunctionToString&quot;,&quot;TryCatch&quot;,&quot;Breadcrumbs&quot;,&quot;GlobalHandlers&quot;,&quot;LinkedErrors&quot;,&quot;UserAgent&quot;,&quot;Dedupe&quot;,&quot;ExtraErrorData&quot;,&quot;RewriteFrames&quot;]},&quot;environment&quot;:&quot;production&quot;,&quot;release&quot;:&quot;daf9a8f20fad739d4f0bd7d88105824726bb206d&quot;,&quot;user&quot;:{&quot;id&quot;:&quot;{f26de55e-91d3-4e73-9929-9339365685cb}&quot;},&quot;breadcrumbs&quot;:[{&quot;timestamp&quot;:1583318025.24,&quot;category&quot;:&quot;navigation&quot;,&quot;data&quot;:{&quot;from&quot;:&quot;/?detectloginloop&quot;,&quot;to&quot;:&quot;/dashboard/overview&quot;}},{&quot;timestamp&quot;:1583318025.246,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;global/LOAD_SUCCESS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318025.254,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;global/START_STATUSPAGE_POLLING&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318025.256,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;global/HYDRATE_FROM_LOCALSTORAGE&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318025.258,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;workspace/GET_RECENTLY_VIEWED_WORKSPACES&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318025.26,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;repository/FETCH_RECENTLY_VIEWED_REPOSITORIES_REQUEST&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318025.445,&quot;category&quot;:&quot;ui.click&quot;,&quot;message&quot;:&quot;body&quot;},{&quot;timestamp&quot;:1583318025.757,&quot;category&quot;:&quot;console&quot;,&quot;data&quot;:{&quot;extra&quot;:{&quot;arguments&quot;:[&quot;prpr&quot;,{}]},&quot;logger&quot;:&quot;console&quot;},&quot;level&quot;:&quot;log&quot;,&quot;message&quot;:&quot;prpr [object Response]&quot;},{&quot;timestamp&quot;:1583318025.759,&quot;category&quot;:&quot;fetch&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;https://bitbucket.org/!api/2.0/repositories?q=uuid%20%3D%20%22%7B44451933-8013-4611-a69b-b118650dd9cb%7D%22%20OR%20uuid%20%3D%20%22%7B88ca448e-7207-4721-ba41-938e1d346cb9%7D%22&amp;role=member&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318025.768,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;repository/FETCH_RECENTLY_VIEWED_REPOSITORIES_SUCCESS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.212,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;keyboard/REGISTER_SHORTCUTS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.215,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;dashboard/LOAD_SUCCESS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.271,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;keyboard/UNREGISTER_SHORTCUTS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.271,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;keyboard/REGISTER_SHORTCUTS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.406,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;dashboard/LOAD_OVERVIEW_SUCCESS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.611,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;dashboard-jira-issues/INIT_DASHBOARD_JIRA_REQUEST&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318026.731,&quot;category&quot;:&quot;xhr&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;POST&quot;,&quot;url&quot;:&quot;https://api-private.atlassian.com/gasv3/api/v1/t&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318026.788,&quot;category&quot;:&quot;xhr&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;POST&quot;,&quot;url&quot;:&quot;https://api-private.atlassian.com/gasv3/api/v1/p&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318026.802,&quot;category&quot;:&quot;console&quot;,&quot;data&quot;:{&quot;extra&quot;:{&quot;arguments&quot;:[&quot;prpr&quot;,{}]},&quot;logger&quot;:&quot;console&quot;},&quot;level&quot;:&quot;log&quot;,&quot;message&quot;:&quot;prpr [object Response]&quot;},{&quot;timestamp&quot;:1583318026.804,&quot;category&quot;:&quot;fetch&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;https://api-private.atlassian.com/emoji/standard?altScale=XHDPI&amp;maxVersion=VERSION_9_0&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318027.027,&quot;category&quot;:&quot;console&quot;,&quot;data&quot;:{&quot;extra&quot;:{&quot;arguments&quot;:[&quot;prpr&quot;,{}]},&quot;logger&quot;:&quot;console&quot;},&quot;level&quot;:&quot;log&quot;,&quot;message&quot;:&quot;prpr [object Response]&quot;},{&quot;timestamp&quot;:1583318027.03,&quot;category&quot;:&quot;fetch&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;POST&quot;,&quot;url&quot;:&quot;https://bitbucket.org/!api/internal/repository-statuses&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318027.032,&quot;category&quot;:&quot;xhr&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;POST&quot;,&quot;url&quot;:&quot;https://api-private.atlassian.com/gasv3/api/v1/t&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318027.038,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;dashboard/update-repositories-with-build-status_SUCCESS&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318027.226,&quot;category&quot;:&quot;console&quot;,&quot;data&quot;:{&quot;extra&quot;:{&quot;arguments&quot;:[&quot;prpr&quot;,{}]},&quot;logger&quot;:&quot;console&quot;},&quot;level&quot;:&quot;log&quot;,&quot;message&quot;:&quot;prpr [object Response]&quot;},{&quot;timestamp&quot;:1583318027.227,&quot;category&quot;:&quot;fetch&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;https://bitbucket.org/!api/internal/user/preferences/%7Bf26de55e-91d3-4e73-9929-9339365685cb%7D/dashboard%3Ajira-issues%3Asite/&quot;,&quot;status_code&quot;:404},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318027.227,&quot;category&quot;:&quot;redux-action&quot;,&quot;message&quot;:&quot;dashboard-jira-issues/SET_DASHBOARD_JIRA_DEFAULT_CLOUD_ID&quot;,&quot;level&quot;:&quot;info&quot;,&quot;data&quot;:&quot;[undefined]&quot;},{&quot;timestamp&quot;:1583318027.249,&quot;category&quot;:&quot;console&quot;,&quot;data&quot;:{&quot;extra&quot;:{&quot;arguments&quot;:[&quot;prpr&quot;,{}]},&quot;logger&quot;:&quot;console&quot;},&quot;level&quot;:&quot;log&quot;,&quot;message&quot;:&quot;prpr [object Response]&quot;},{&quot;timestamp&quot;:1583318027.249,&quot;category&quot;:&quot;fetch&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;GET&quot;,&quot;url&quot;:&quot;https://bitbucket.org/!api/internal/my/available-products&quot;,&quot;status_code&quot;:200},&quot;type&quot;:&quot;http&quot;},{&quot;timestamp&quot;:1583318027.602,&quot;category&quot;:&quot;console&quot;,&quot;data&quot;:{&quot;extra&quot;:{&quot;arguments&quot;:[&quot;prpr&quot;,{}]},&quot;logger&quot;:&quot;console&quot;},&quot;level&quot;:&quot;log&quot;,&quot;message&quot;:&quot;prpr [object Response]&quot;},{&quot;timestamp&quot;:1583318027.603,&quot;category&quot;:&quot;fetch&quot;,&quot;data&quot;:{&quot;method&quot;:&quot;DELETE&quot;,&quot;url&quot;:&quot;https://bitbucket.org/!api/internal/user/preferences/%7Bf26de55e-91d3-4e73-9929-9339365685cb%7D/dashboard%3Ajira-issues%3Asite/&quot;,&quot;status_code&quot;:204},&quot;type&quot;:&quot;http&quot;}],&quot;request&quot;:{&quot;url&quot;:&quot;https://bitbucket.org/dashboard/overview&quot;,&quot;headers&quot;:{&quot;User-Agent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36&quot;}},&quot;extra&quot;:{&quot;lastAction&quot;:&quot;dashboard-jira-issues/SET_DASHBOARD_JIRA_DEFAULT_CLOUD_ID&quot;,&quot;state&quot;:&quot;INTENTIONALLY_REMOVED&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_5}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/1480772/store/?sentry_key=2dcda83904474d8c86928ebbfa1ab294&amp;sentry_version=7</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.bitbucket.org/internal/metrics/statsd/" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;data&quot;:{&quot;performance.app.mounted&quot;:2873.974999964237},&quot;metric&quot;:&quot;histogram&quot;,&quot;tags&quot;:[&quot;source:frontbucket&quot;,&quot;loadType:full_page&quot;,&quot;view_name:bitbucket.apps.dashboard.views.DashboardOverviewView&quot;]},{&quot;data&quot;:{&quot;performance.dashboard.overview.rendered&quot;:4252.995000015479},&quot;metric&quot;:&quot;histogram&quot;,&quot;tags&quot;:[&quot;source:frontbucket&quot;,&quot;loadType:full_page&quot;,&quot;appWasServerSideRendered:false&quot;,&quot;view_name:bitbucket.apps.dashboard.views.DashboardOverviewView&quot;,&quot;isAtlaskitRouterEnabled:false&quot;,&quot;isParcelBundlesEnabled:false&quot;]}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_6}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/metrics/statsd/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.bitbucket.org/internal/metrics/statsd/" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;data&quot;:{&quot;performance.navigationStart&quot;:1583318021002,&quot;performance.unloadEventStart&quot;:0,&quot;performance.unloadEventEnd&quot;:0,&quot;performance.redirectStart&quot;:0,&quot;performance.redirectEnd&quot;:0,&quot;performance.fetchStart&quot;:1365,&quot;performance.domainLookupStart&quot;:1365,&quot;performance.domainLookupEnd&quot;:1365,&quot;performance.connectStart&quot;:1365,&quot;performance.connectEnd&quot;:1365,&quot;performance.secureConnectionStart&quot;:0,&quot;performance.requestStart&quot;:1367,&quot;performance.responseStart&quot;:1941,&quot;performance.responseEnd&quot;:2080,&quot;performance.domLoading&quot;:1983,&quot;performance.domInteractive&quot;:4377,&quot;performance.domContentLoadedEventStart&quot;:4396,&quot;performance.domContentLoadedEventEnd&quot;:4402,&quot;performance.domComplete&quot;:7142,&quot;performance.loadEventStart&quot;:7143,&quot;performance.loadEventEnd&quot;:0},&quot;metric&quot;:&quot;histogram&quot;,&quot;tags&quot;:[&quot;source:frontbucket&quot;,&quot;loadType:full_page&quot;,&quot;view_name:bitbucket.apps.dashboard.views.DashboardOverviewView&quot;,&quot;fd-atlaskit-router:false&quot;,&quot;fd-atlaskit-router-resources-dashboard:false&quot;,&quot;isParcelBundlesEnabled:false&quot;]}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_6}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/metrics/statsd/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bam.nr-data.net/events/1/a2cef8c3d3?a=1841284&amp;v=1167.2a4546b&amp;to=NFcGYEdUW0IAVE1QCw0dIkFbVkFYDlkWWw0XUBFXXlBBHwBHSUpKDlMWX1BBXF8GGU9QARRBXkZaWkE%3D&amp;rst=8431&amp;ref=https://bitbucket.org/dashboard/overview" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="a" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a</stringProp>
+                  <stringProp name="Argument.value">1841284</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="rst" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">rst</stringProp>
+                  <stringProp name="Argument.value">8431</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ref" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ref</stringProp>
+                  <stringProp name="Argument.value">https://bitbucket.org/dashboard/overview</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="v" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">v</stringProp>
+                  <stringProp name="Argument.value">1167.2a4546b</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="to" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">to</stringProp>
+                  <stringProp name="Argument.value">NFcGYEdUW0IAVE1QCw0dIkFbVkFYDlkWWw0XUBFXXlBBHwBHSUpKDlMWX1BBXF8GGU9QARRBXkZaWkE=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="bel.7;1,9,,627,5jd,n9,&apos;initialPageLoad,&apos;https://bitbucket.org/,1,&apos;https://bitbucket.org/dashboard/overview,,,,7f,!!&apos;31e7893c-f13b-4551-9c24-1d3b41457ccc,&apos;1,3dd,3dd;2,,3ag,di,l,d,&apos;GET,5k,&apos;bitbucket.org:443,&apos;/!api/2.0/repositories,,,1,&apos;4,!!!;2,,3rw,lz,9i,4v,5,5k,&apos;api-private.atlassian.com:443,&apos;/emoji/standard,,,1,&apos;5,!!!;2,,41b,du,1j,b,&apos;POST,5k,9,&apos;/gasv3/api/v1/t,xg,1s,,&apos;6,!!!;2,,463,an,c,1,c,5k,9,&apos;/gasv3/api/v1/p,so,1s,,&apos;7,!!!;2,,46d,an,bn,4z,c,5k,6,&apos;/!api/internal/repository-statuses,,2,1,&apos;8,!!!;2,,4cn,av,1,,c,5k,9,d,14a,1s,,&apos;11,!!!;2,,4c3,bi,60,m,5,b8,6,&apos;/!api/internal/user/preferences/{f26de55e-91d3-4e73-9929-9339365685cb}/dashboard:jira-issues:site/,,q,1,&apos;10,!!!;2,1,4c0,bl,65,5,5,5k,6,&apos;/!api/internal/my/available-products,,6o,1,&apos;9,!!!;2,1,4tq,9m,15,12,&apos;DELETE,5o,6,k,,0,1,&apos;12,!!!;2,,53r,ks,5f,1,c,5k,&apos;sentry.io:443,&apos;/api/1480772/store/,4uy,15,1,&apos;13,!!!;2,,54j,xl,3,2,5,5k,&apos;api.bitbucket.org:443,&apos;/internal/metrics/statsd/,dt,2,1,&apos;14,!!!;b,!!!!11x,,,,!,2,fy,3v,-2p,1ui,j,6,244,1,c" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bel.7;1,9,,627,5jd,n9,&apos;initialPageLoad,&apos;https://bitbucket.org/,1,&apos;https://bitbucket.org/dashboard/overview,,,,7f,!!&apos;31e7893c-f13b-4551-9c24-1d3b41457ccc,&apos;1,3dd,3dd;2,,3ag,di,l,d,&apos;GET,5k,&apos;bitbucket.org:443,&apos;/!api/2.0/repositories,,,1,&apos;4,!!!;2,,3rw,lz,9i,4v,5,5k,&apos;api-private.atlassian.com:443,&apos;/emoji/standard,,,1,&apos;5,!!!;2,,41b,du,1j,b,&apos;POST,5k,9,&apos;/gasv3/api/v1/t,xg,1s,,&apos;6,!!!;2,,463,an,c,1,c,5k,9,&apos;/gasv3/api/v1/p,so,1s,,&apos;7,!!!;2,,46d,an,bn,4z,c,5k,6,&apos;/!api/internal/repository-statuses,,2,1,&apos;8,!!!;2,,4cn,av,1,,c,5k,9,d,14a,1s,,&apos;11,!!!;2,,4c3,bi,60,m,5,b8,6,&apos;/!api/internal/user/preferences/{f26de55e-91d3-4e73-9929-9339365685cb}/dashboard:jira-issues:site/,,q,1,&apos;10,!!!;2,1,4c0,bl,65,5,5,5k,6,&apos;/!api/internal/my/available-products,,6o,1,&apos;9,!!!;2,1,4tq,9m,15,12,&apos;DELETE,5o,6,k,,0,1,&apos;12,!!!;2,,53r,ks,5f,1,c,5k,&apos;sentry.io:443,&apos;/api/1480772/store/,4uy,15,1,&apos;13,!!!;2,,54j,xl,3,2,5,5k,&apos;api.bitbucket.org:443,&apos;/internal/metrics/statsd/,dt,2,1,&apos;14,!!!;b,!!!!11x,,,,!,2,fy,3v,-2p,1ui,j,6,244,1,c</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_7}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">events/1/a2cef8c3d3</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://bam.nr-data.net/events/1/a2cef8c3d3?a=1841284&amp;v=1167.2a4546b&amp;to=NFcGYEdUW0IAVE1QCw0dIkFbVkFYDlkWWw0XUBFXXlBBHwBHSUpKDlMWX1BBXF8GGU9QARRBXkZaWkE%3D&amp;rst=17554&amp;ref=https://bitbucket.org/dashboard/overview" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">bel.6;e,&apos;fp,3dd,;e,&apos;fcp,3dd,</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_7}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">events/1/a2cef8c3d3?a=1841284&amp;v=1167.2a4546b&amp;to=NFcGYEdUW0IAVE1QCw0dIkFbVkFYDlkWWw0XUBFXXlBBHwBHSUpKDlMWX1BBXF8GGU9QARRBXkZaWkE%3D&amp;rst=17554&amp;ref=https://bitbucket.org/dashboard/overview</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
